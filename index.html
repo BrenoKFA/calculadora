@@ -11,13 +11,14 @@
     <div class="container">
         <input type="text" id="n1" class="valores">
         <input type="text" id="n2" class="valores">
-        <select name="operacao" id="operacao">
-            <option value="somar">Somar</option>
-            <option value="subtrair">Subtrair</option>
-            <option value="multiplicar">Multiplicar</option>
-            <option value="dividir">Dividir</option>
-        </select>
-        <button id="calcular" onclick="calcular()">Calcular</button>
+
+        <button class="operacao" value="adicao" onclick="calcular(this.value)">+</button>
+        <button class="operacao" value="subtracao" onclick="calcular(this.value)">-</button>
+        <button class="operacao" value="multiplicacao" onclick="calcular(this.value)">×</button>
+        <button class="operacao" value="divisao" onclick="calcular(this.value)">÷</button>
+            
+        <button id="calcular" onclick="resultado(this.value)">Calcular</button>
+
         <div id="resultado"></div>
     </div>
 </body>

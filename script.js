@@ -1,15 +1,21 @@
-function calcular() {
-    let v1 = document.getElementById('n1').value
-    let v2 = document.getElementById('n2').value
-    let oper = document.getElementById('operacao').value
+let v1 = document.getElementById('n1')
+let v2 = document.getElementById('n2')
+let operacao = document.querySelector("#calcular")
 
-    if (oper == 'somar') {
-        document.getElementById('resultado').innerHTML = Number(v1) + Number(v2)
-    } else if (oper == 'subtrair') {
-        document.getElementById('resultado').innerHTML = Number(v1) - Number(v2)
-    } else if (oper == 'multiplicar') {
-        document.getElementById('resultado').innerHTML = Number(v1) * Number(v2)
-    } else {
-        document.getElementById('resultado').innerHTML = Number(v1) / Number(v2)
+function calcular(o) {
+    operacao.setAttribute("value", o)
+}
+
+function resultado() {
+    let res = document.querySelector("#resultado")
+
+    if (operacao.value == "adicao") {
+        res.innerHTML =  parseInt(v1.value) + parseInt(v2.value)
+    } else if (operacao.value == "subtracao") {
+        res.innerHTML = parseInt(v1.value) - parseInt(v2.value)
+    } else if (operacao.value == "multiplicacao") {
+        res.innerHTML = parseInt(v1.value) * parseInt(v2.value)
+    } else if (operacao.value == "divisao") {
+        res.innerHTML = parseInt(v1.value) / parseInt(v2.value)
     }
 }
